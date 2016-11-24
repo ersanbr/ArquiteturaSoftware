@@ -1,0 +1,35 @@
+ 
+function config($routeProvider, $locationProvider){
+   // remove o # da url
+	$locationProvider.html5Mode({
+		  enabled: true,
+		  requireBase: false
+		});
+ 
+   $routeProvider
+ 
+   // para a rota '/', carregaremos o template home.html e o controller 'HomeCtrl'
+   .when('/', {
+      templateUrl : 'views/home.html',
+      controller     : 'HomeCtrl',
+   })
+ 
+   // para a rota '/sobre', carregaremos o template sobre.html e o controller 'SobreCtrl'
+   .when('/cadastraCliente', {
+      templateUrl : 'views/cadastraCliente.html',
+      controller  : 'cadastraClienteCtrl',
+   })
+ 
+   // para a rota '/contato', carregaremos o template contato.html e o controller 'ContatoCtrl'
+   .when('/cadastraPlano', {
+      templateUrl : 'views/cadastraPlano.html',
+      controller  : 'cadastraPlanoCtrl',
+   })
+ 
+   // caso não seja nenhum desses, redirecione para a rota '/'
+   .otherwise ({ redirectTo: 'views/home.html' });
+};
+
+angular
+	.module('App', ['ngRoute'])
+	.config(config);

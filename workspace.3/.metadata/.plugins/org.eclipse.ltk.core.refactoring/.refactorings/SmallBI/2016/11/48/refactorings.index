@@ -1,0 +1,18 @@
+1479917058932	Rename resource 'index.html'
+1479917081037	Move 'controller' to 'main'
+1479917095220	Move 'app.js' to 'main'
+1479917134842	Rename resource 'controller.js'
+1479917290052	Rename resource 'indexAntiga.html'
+1479921820811	Rename resource 'homeService.js'
+1479921918525	Move 'app.js' to 'controller'
+1479921929476	Rename resource 'app.js'
+1479922123542	Move 'app.js' to 'controller'
+1479922162925	Delete element
+1479923430471	Delete element
+1479923436751	Delete element
+1479928843692	Move 6 resources to 'old'
+1479928943311	Delete element
+1479929150833	Rename resource 'scripts.js'
+1479929212063	Move 'cadastraCliente.html' to 'pages'
+1480012724646	Delete element
+1480013597612	Rename local variable 'plan'

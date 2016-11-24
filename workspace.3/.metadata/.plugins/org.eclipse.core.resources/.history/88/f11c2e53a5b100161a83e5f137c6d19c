@@ -1,0 +1,10 @@
+// about-ctrl.js
+
+function HomeCtrl($scope) {
+  $scope.pageTitle = 'HOME';
+  $scope.message = 'Look! I am an about page.';
+}
+
+angular
+  .module('App')
+  .controller('HomeCtrl', HomeCtrl);

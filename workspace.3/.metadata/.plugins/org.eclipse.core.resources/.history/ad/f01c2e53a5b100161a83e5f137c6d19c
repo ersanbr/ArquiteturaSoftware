@@ -1,0 +1,41 @@
+var cadPlano = angular.module("cadPlano", []);
+
+cadPlano.controller('HttpGetController', function($scope, $http) {
+	$scope.BuscarPlanos = function() {
+		$http.get('http://localhost:8081/SmallBI/rest/smallbi/planos/list')
+				.success(function(data) {
+					$scope.planos = data["planos"];
+				});
+	};
+	$scope.BuscarPlanos();
+});
+
+cadPlano.controller("HttpPostController", function($scope, $http) {
+	$scope.EnviarPlano = function() {
+
+		var parameter = JSON.stringify({
+			type : "planos",
+			nome : $scope.nome,
+			descricao   : $scope.descricao,
+			valor  : $scope.valor
+		});
+
+		var config = {
+			headers : {
+				'Content-Type' : 'application/json;charset=utf-8;'
+			}
+		}
+
+		$http.post(
+				'http://localhost:8081/SmallBI/rest/smallbi/planos/create',
+				parameter, config).success(
+				function(data, status, headers, config) {
+					$scope.Resposta = 'Empresa Salva com Sucesso!';
+				}).error(
+				function(data, status, header, config) {
+					$scope.Resposta = "Data: " + data + "<hr />status: "
+							+ status + "<hr />headers: " + header
+							+ "<hr />config: " + config;
+				});
+	};
+});

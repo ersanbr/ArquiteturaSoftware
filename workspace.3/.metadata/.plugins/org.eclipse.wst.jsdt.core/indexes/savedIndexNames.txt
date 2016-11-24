@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+/home/ersan/workspace (2)/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3120803980.index
+1673011768.index
+737561797.index
+2378731685.index
+3721333711.index
+3786676003.index

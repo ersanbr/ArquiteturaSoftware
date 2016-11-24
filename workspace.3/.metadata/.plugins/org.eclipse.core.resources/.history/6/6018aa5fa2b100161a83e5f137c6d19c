@@ -1,0 +1,17 @@
+var app = angular.module('app',[]);
+
+app.controller('HomeCtrl', function($rootScope, $location)
+{
+   $rootScope.activetab = $location.path();
+   
+});
+ 
+app.controller('cadastraClienteCtrl', function($rootScope, $location, [cadCliente])
+{
+   $rootScope.activetab = $location.path();
+});
+ 
+app.controller('cadastraPlanoCtrl', function($rootScope, $location, [cadPlano])
+{
+   $rootScope.activetab = $location.path();
+});

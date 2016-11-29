@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-
 import entity.Cliente;
 
 public class ClienteDao implements InterfaceDao<Cliente>{
@@ -18,6 +17,7 @@ public class ClienteDao implements InterfaceDao<Cliente>{
 		em.close();		
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Cliente> listObj() {
 		EntityManager em = SingletonConexao.getInstance();

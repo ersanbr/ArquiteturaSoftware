@@ -2,7 +2,6 @@ package dao;
 
 import java.util.List;
 
-import entity.Cliente;
 
 public interface InterfaceDao <T>{	
 	public void createObj(T t);

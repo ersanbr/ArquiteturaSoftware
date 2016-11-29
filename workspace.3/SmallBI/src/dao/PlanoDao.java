@@ -18,6 +18,7 @@ public class PlanoDao implements InterfaceDao<Plano>{
 		em.close();
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Plano> listObj() {
 		EntityManager em = SingletonConexao.getInstance();

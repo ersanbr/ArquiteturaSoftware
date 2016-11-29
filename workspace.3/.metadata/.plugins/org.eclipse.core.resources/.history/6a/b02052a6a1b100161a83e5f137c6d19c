@@ -1,2 +1,0 @@
-var HomeService = angular.module('HomeService', [])
-	.service('Home')

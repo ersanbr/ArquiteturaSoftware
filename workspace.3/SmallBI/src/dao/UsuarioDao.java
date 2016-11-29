@@ -4,8 +4,6 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-
-import entity.Cliente;
 import entity.Usuario;
 
 public class UsuarioDao implements InterfaceDao<Usuario>{
@@ -19,6 +17,7 @@ public class UsuarioDao implements InterfaceDao<Usuario>{
 		em.close();		
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Usuario> listObj() {
 		EntityManager em = SingletonConexao.getInstance();
@@ -49,5 +48,4 @@ public class UsuarioDao implements InterfaceDao<Usuario>{
 		EntityManager em = SingletonConexao.getInstance();
 		return em.find(Usuario.class, id);
 	}
-
 }

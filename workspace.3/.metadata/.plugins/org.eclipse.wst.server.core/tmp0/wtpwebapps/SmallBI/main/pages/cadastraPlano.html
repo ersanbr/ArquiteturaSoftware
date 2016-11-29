@@ -4,9 +4,8 @@
 	<div>
 		<p>
 			Nome: <input type="text" name="nome" ng-model="nome" required />
-			Descricao: <input type="text" name="descricao" ng-model="descricao"
-				required /> valor: <input type="text" name="valor"
-				ng-model="valor" required />
+			Descricao: <input type="text" name="descricao" ng-model="descricao"	required /> 
+			valor: <input type="text" name="valor" ng-model="valor" required />
 		</p>
 		<button ng-click="EnviarPlano()">Cadastrar</button>
 		<span><p>{{ Resposta }}</p></span>
@@ -15,7 +14,8 @@
 
 	<div >
 		<button id="botao" ng-click="BuscarPlanos()">Lista Planos</button>
-		<table class="table ">
+		<br></br>
+		<table class="table">
 			<tr>
 				<td><b>ID</b></td>
 				<td><b>NOME</b></td>

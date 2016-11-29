@@ -4,9 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement(name="usuarios")
 @Entity
+@Table(name="usuarios")
 public class Usuario {
 	
 	@Id
@@ -15,8 +18,7 @@ public class Usuario {
 	private String nome;
 	private String login;
 	private String senha;
-	@ManyToOne
-	private Cliente cliente;// <== empresa!
+
 	
 	public Integer getId() {
 		return id;
@@ -41,12 +43,6 @@ public class Usuario {
 	}
 	public void setSenha(String senha) {
 		this.senha = senha;
-	}
-	public Cliente getCliente() {
-		return cliente;
-	}
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
 	}
 
 }

@@ -11,8 +11,10 @@ import javax.ws.rs.core.MediaType;
 
 import business.BusinessCliente;
 import business.BusinessPlano;
+import business.BusinessUsuario;
 import entity.Cliente;
 import entity.Plano;
+import entity.Usuario;
 
 @Path("/smallbi")
 public class WebService {
@@ -43,6 +45,20 @@ public class WebService {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void createPlano(Plano plano){
 		new BusinessPlano().save(plano);
+	}
+	
+	@GET
+	@Path("/usuarios/list")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Usuario> getUsuarios(){
+		return new BusinessUsuario().list();
+	}
+	
+	@POST
+	@Path("/usuarios/create")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void createUsuario(Usuario usuario){
+		new BusinessUsuario().save(usuario);
 	}
 
 }

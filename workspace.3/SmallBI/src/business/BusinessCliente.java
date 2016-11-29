@@ -10,7 +10,6 @@ public class BusinessCliente implements InterfaceBusiness<Cliente>{
 
 	@Override
 	public void save(Cliente cliente) {
-		
 		if(cliente.getNome().equals(null) || cliente.getNome().equals("")){
 			System.out.println("O nome deve ser informado!");
 			//throw new Exception("Business Erro: O nome deve ser informado!");

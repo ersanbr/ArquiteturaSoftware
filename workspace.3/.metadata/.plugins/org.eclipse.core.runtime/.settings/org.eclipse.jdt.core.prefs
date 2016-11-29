@@ -6,3 +6,4 @@ org.eclipse.jdt.core.compiler.compliance=1.8
 org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
 org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
 org.eclipse.jdt.core.compiler.source=1.8
+org.eclipse.jdt.core.userLibrary.JSF\ 2.2\ (Mojarra\ 2.2.0)=<?xml version\="1.0" encoding\="UTF-8"?>\n<userlibrary systemlibrary\="false" version\="2">\n\t<archive path\="/home/ersan/Repositorio_UP/ArquiteturaSoftware/workspace.3/libraries/JSF 2.2 (Mojarra 2.2.0) (1)/mojarra-2.2.0-FCS/lib/javax.faces.jar"/>\n</userlibrary>\n

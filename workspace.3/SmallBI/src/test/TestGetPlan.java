@@ -9,24 +9,24 @@ import entity.Plano;
 
 public class TestGetPlan {
 
-//	@Test
-//	public void getNewPlan(){
-//		Plan plan = new Plan();
-//		plan.setName("Free 2.0");
-//		plan.setDescription("Blabla");
-//		
-//		new BusinessPlan().save(plan);
-//	}
+	@Test
+	public void getNewPlano(){
+		Plano plano = new Plano();
+		plano.setNome("Free 2.0");
+		plano.setDescricao("Blabla");
+		
+		new BusinessPlano().save(plano);
+	}
 	
-//	@Test
-//	public void listPlan(){
-//		List<Plan> plans = new BusinessPlan().list();
-//		
-//		for(Plan p : plans){
-//			System.out.println("Name of plan: " + p.getName());
-//			System.out.println("Description of plan: " + p.getDescription());
-//		}
-//	}
+	@Test
+	public void listPlano(){
+		List<Plano> planos = new BusinessPlano().list();
+		
+		for(Plano p : planos){
+			System.out.println("Nome do plano: " + p.getNome());
+			System.out.println("Descrição do planon: " + p.getDescricao());
+		}
+	}
 	
 //	@Test
 //	public void updatePlan(){

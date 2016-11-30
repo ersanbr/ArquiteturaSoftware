@@ -140,7 +140,7 @@ SmallBIApp.controller('UsuarioController', function($scope, $http) {
 		}
 
 		$http.post(
-				'http://localhost:8081/SmallBI/rest/smallbi/usuarios/create',
+				'http://node56529-smallbi.whelastic.net/SmallBI/rest/smallbi/usuarios/create',
 				parameter, config).success(
 				function(data, status, headers, config) {
 					$scope.Resposta = 'Usuário Salvo com Sucesso!';

@@ -41,7 +41,11 @@ SmallBIApp.controller('ClienteController', function($scope, $http) {
 	$scope.BuscarClientes = function() {
 		$http.get('http://localhost:8081/SmallBI/rest/smallbi/clientes/list')
 				.success(function(data) {
-					$scope.clientes = data.clientes;
+					if (data = 1){
+                        $scope.clientes = data;
+					} else {
+						$scope.clientes = data.clientes;
+					}
 				});
 	};
 	$scope.BuscarClientes();

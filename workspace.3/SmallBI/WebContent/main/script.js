@@ -39,7 +39,7 @@ SmallBIApp.controller('mainController', function($scope) {
 SmallBIApp.controller('ClienteController', function($scope, $http) {
 	$scope.message = 'Cadastro de Cliente';
 	$scope.BuscarClientes = function() {
-		$http.get('http://localhost:8081/SmallBI/rest/smallbi/clientes/list')
+		$http.get('http://node56529-smallbi.whelastic.net/SmallBI/rest/smallbi/clientes/list')
 				.success(function(data) {
 					$scope.clientes = data.clientes;
 				});
@@ -62,7 +62,7 @@ SmallBIApp.controller('ClienteController', function($scope, $http) {
 		}
 
 		$http.post(
-				'http://localhost:8081/SmallBI/rest/smallbi/clientes/create',
+				'http://node56529-smallbi.whelastic.net/SmallBI/rest/smallbi/clientes/create',
 				parameter, config).success(
 				function(data, status, headers, config) {
 					$scope.Resposta = 'Empresa Salva com Sucesso!';
@@ -78,7 +78,7 @@ SmallBIApp.controller('ClienteController', function($scope, $http) {
 SmallBIApp.controller('PlanoController', function($scope, $http) {
 	$scope.message = 'Cadastro de Planos';
 	$scope.BuscarPlanos = function() {
-		$http.get('http://localhost:8081/SmallBI/rest/smallbi/planos/list')
+		$http.get('http://node56529-smallbi.whelastic.net/SmallBI/rest/smallbi/planos/list')
 				.success(function(data) {
 					$scope.planos = data.planos;
 				});
@@ -101,7 +101,7 @@ SmallBIApp.controller('PlanoController', function($scope, $http) {
 		}
 
 		$http.post(
-				'http://localhost:8081/SmallBI/rest/smallbi/planos/create',
+				'http://node56529-smallbi.whelastic.net/SmallBI/rest/smallbi/planos/create',
 				parameter, config).success(
 				function(data, status, headers, config) {
 					$scope.Resposta = 'Plano Salva com Sucesso!';
@@ -117,7 +117,7 @@ SmallBIApp.controller('PlanoController', function($scope, $http) {
 SmallBIApp.controller('UsuarioController', function($scope, $http) {
 	$scope.message = 'Cadastro de Usuário.';
 	$scope.BuscarUsuarios = function() {
-		$http.get('http://localhost:8081/SmallBI/rest/smallbi/usuarios/list')
+		$http.get('http://node56529-smallbi.whelastic.net/SmallBI/rest/smallbi/usuarios/list')
 				.success(function(data) {
 					$scope.usuarios = data.usuarios;
 				});
@@ -140,7 +140,7 @@ SmallBIApp.controller('UsuarioController', function($scope, $http) {
 		}
 
 		$http.post(
-				'http://localhost:8081/SmallBI/rest/smallbi/usuarios/create',
+				'http://node56529-smallbi.whelastic.net/SmallBI/rest/smallbi/usuarios/create',
 				parameter, config).success(
 				function(data, status, headers, config) {
 					$scope.Resposta = 'Usuário Salvo com Sucesso!';

@@ -1,0 +1,32 @@
+<div class="jumbotron text-center">
+	<h2>Página de Cadastro de Planos</h2>
+	<p>{{ message }}</p>
+	<div>
+		<p>
+			Nome: <input type="text" name="nome" ng-model="nome" required />
+			Descricao: <input type="text" name="descricao" ng-model="descricao"	required /> 
+			valor: <input type="text" name="valor" ng-model="valor" required />
+		</p>
+		<button ng-click="EnviarPlano()">Cadastrar</button>
+		<span><p>{{ Resposta }}</p></span>
+		<hr />
+	</div>
+
+	<div >
+		<button id="botao" ng-click="BuscarPlanos()">Lista Planos</button>
+		<table class="table ">
+			<tr>
+				<td><b>ID</b></td>
+				<td><b>NOME</b></td>
+				<td><b>DESCRIÇÃO</b></td>
+				<td><b>VALOR</b></td>
+			</tr>
+			<tr ng-repeat="i in planos">
+				<td>{{i.id}}</td>
+				<td>{{i.nome}}</td>
+				<td>{{i.descricao}}</td>
+				<td>{{i.valor}}</td>
+			</tr>
+		</table>
+	</div>
+</div>

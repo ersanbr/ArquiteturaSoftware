@@ -1,0 +1,32 @@
+<div class="jumbotron text-center">
+	<h2>Página de Cadastro de Usuarios</h2>
+	<p>{{ message }}</p>
+	<div>
+		<p>
+			Nome: <input type="text" name="nome" ng-model="nome" required />
+			Login: <input type="text" name="descricao" ng-model="login"	required /> 
+			Senha: <input type="text" name="senha" 	ng-model="senha" required />
+		</p>
+		<button ng-click="EnviarUsuario()">Cadastrar</button>
+		<span><p>{{ Resposta }}</p></span>
+		<hr />
+	</div>
+
+	<div >
+		<button id="botao" ng-click="BuscarUsuarios()">Lista Usuários</button>
+		<table class="table ">
+			<tr>
+				<td><b>ID</b></td>
+				<td><b>NOME</b></td>
+				<td><b>LOGIN</b></td>
+				<td><b>SENHA</b></td>
+			</tr>
+			<tr ng-repeat="i in usuarios">
+				<td>{{i.id}}</td>
+				<td>{{i.nome}}</td>
+				<td>{{i.login}}</td>
+				<td>{{i.senha}}</td>
+			</tr>
+		</table>
+	</div>
+</div>

@@ -23,7 +23,8 @@ public class WebService {
 	@Path("/clientes/list")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Cliente> getClientes(){
-		return new BusinessCliente().list();
+		List<Cliente> clientesList = new BusinessCliente().list();
+		return clientesList;
 	}
 	
 	@POST

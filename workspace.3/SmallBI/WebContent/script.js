@@ -110,7 +110,7 @@ SmallBIApp.controller('PlanoController', function($scope, $http) {
 		}
 
 		$http.post(
-				'http://smallbi.jelasticlw.com.brr/rest/smallbi/planos/create',
+				'http://smallbi.jelasticlw.com.br/rest/smallbi/planos/create',
 				parameter, config).success(
 				function(data, status, headers, config) {
 					$scope.Resposta = 'Plano Salva com Sucesso!';
@@ -153,7 +153,7 @@ SmallBIApp.controller('UsuarioController', function($scope, $http) {
 		}
 
 		$http.post(
-				'http://node115243-smallbi.jelasticlw.com.br/rest/smallbi/usuarios/create',
+				'http://smallbi.jelasticlw.com.br/rest/smallbi/usuarios/create',
 				parameter, config).success(
 				function(data, status, headers, config) {
 					$scope.Resposta = 'Usuário Salvo com Sucesso!';

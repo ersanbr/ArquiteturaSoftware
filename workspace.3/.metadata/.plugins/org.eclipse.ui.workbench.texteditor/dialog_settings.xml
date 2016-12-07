@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="node115243-smallbi.jelasticlw.com.br" key="selection"/>
+		<item value="smallbi.whelastic.net" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="smallbi.jelasticlw.com.br"/>
 			<item value="localhost:8081"/>
 			<item value="node56529-smallbi.whelastic.net"/>
 			<item value="clientes"/>
@@ -16,6 +17,7 @@
 			<item value="Plan"/>
 		</list>
 		<list key="replacehistory">
+			<item value="smallbi.whelastic.net"/>
 			<item value="node115243-smallbi.jelasticlw.com.br"/>
 			<item value="localhost:8081"/>
 			<item value="node56529-smallbi.whelastic.net"/>

@@ -6,7 +6,6 @@
 			Nome: <input type="text" name="nome" ng-model="nome" required /> 
 			RG:	<input type="text" name="rg" ng-model="rg" required /> 
 			CPF: <input type="text" name="cpf" ng-model="cpf" required />
-			TELEFONE: <input type="text" name="telefone" ng-model="telefone" required />
 		</p>
 		<button ng-click="EnviarCliente()">Cadastrar</button>
 		<span><p>{{ Resposta }}</p></span>

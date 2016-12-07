@@ -6,7 +6,6 @@
 			Nome: <input type="text" name="nome" ng-model="nome" required /> 
 			RG:	<input type="text" name="rg" ng-model="rg" required /> 
 			CPF: <input type="text" name="cpf" ng-model="cpf" required />
-			TELEFONE: <input type="text" name="telefone" ng-model="telefone" required />
 		</p>
 		<button ng-click="EnviarCliente()">Cadastrar</button>
 		<span><p>{{ Resposta }}</p></span>
@@ -22,14 +21,12 @@
 				<td><b>NOME</b></td>
 				<td><b>RG</b></td>
 				<td><b>CPF</b></td>
-				<td><b>TELEFONE</b></td>
 			</tr>
 			<tr ng-repeat="i in clientes">
 				<td>{{i.id}}</td>
 				<td>{{i.nome}}</td>
 				<td>{{i.rg}}</td>
 				<td>{{i.cpf}}</td>
-				<td>{{i.telefone}}</td>
 			</tr>
 		</table>
 	</div>

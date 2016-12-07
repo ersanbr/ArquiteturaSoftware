@@ -39,7 +39,7 @@ SmallBIApp.controller('mainController', function($scope) {
 SmallBIApp.controller('ClienteController', function($scope, $http) {
 	$scope.message = 'Cadastro de Cliente';
 	$scope.BuscarClientes = function() {
-		$http.get('http://smallbi.jelasticlw.com.br/rest/smallbi/clientes/list')
+		$http.get('http://smallbi.whelastic.net/rest/smallbi/clientes/list')
 				.success(function(data) {
 					if (data.clientes.length == undefined){
 						$scope.clientes = data;
@@ -57,7 +57,8 @@ SmallBIApp.controller('ClienteController', function($scope, $http) {
 			type : "clientes",
 			nome : $scope.nome,
 			rg : $scope.rg,
-			cpf : $scope.cpf
+			cpf : $scope.cpf,
+			telefone : $scope.telefone
 		});
 
 		var config = {
@@ -67,7 +68,7 @@ SmallBIApp.controller('ClienteController', function($scope, $http) {
 		}
 
 		$http.post(
-				'http://smallbi.jelasticlw.com.br/rest/smallbi/clientes/create',
+				'http://smallbi.whelastic.net/rest/smallbi/clientes/create',
 				parameter, config).success(
 				function(data, status, headers, config) {
 					$scope.Resposta = 'Empresa Salva com Sucesso!';
@@ -83,7 +84,7 @@ SmallBIApp.controller('ClienteController', function($scope, $http) {
 SmallBIApp.controller('PlanoController', function($scope, $http) {
 	$scope.message = 'Cadastro de Planos';
 	$scope.BuscarPlanos = function() {
-		$http.get('http://smallbi.jelasticlw.com.br/rest/smallbi/planos/list')
+		$http.get('http://smallbi.whelastic.net/rest/smallbi/planos/list')
 				.success(function(data) {
 					if (data.planos.length == undefined){
 						$scope.planos = data;
@@ -110,7 +111,7 @@ SmallBIApp.controller('PlanoController', function($scope, $http) {
 		}
 
 		$http.post(
-				'http://smallbi.jelasticlw.com.br/rest/smallbi/planos/create',
+				'http://smallbi.whelastic.net/rest/smallbi/planos/create',
 				parameter, config).success(
 				function(data, status, headers, config) {
 					$scope.Resposta = 'Plano Salva com Sucesso!';
@@ -126,7 +127,7 @@ SmallBIApp.controller('PlanoController', function($scope, $http) {
 SmallBIApp.controller('UsuarioController', function($scope, $http) {
 	$scope.message = 'Cadastro de Usuário.';
 	$scope.BuscarUsuarios = function() {
-		$http.get('http://smallbi.jelasticlw.com.br/rest/smallbi/usuarios/list')
+		$http.get('http://smallbi.whelastic.net/rest/smallbi/usuarios/list')
 				.success(function(data) {
 					if (data.usuarios.length == undefined){
 						$scope.usuarios = data;
@@ -153,7 +154,7 @@ SmallBIApp.controller('UsuarioController', function($scope, $http) {
 		}
 
 		$http.post(
-				'http://smallbi.jelasticlw.com.br/rest/smallbi/usuarios/create',
+				'http://smallbi.whelastic.net/rest/smallbi/usuarios/create',
 				parameter, config).success(
 				function(data, status, headers, config) {
 					$scope.Resposta = 'Usuário Salvo com Sucesso!';

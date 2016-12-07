@@ -39,9 +39,14 @@ SmallBIApp.controller('mainController', function($scope) {
 SmallBIApp.controller('ClienteController', function($scope, $http) {
 	$scope.message = 'Cadastro de Cliente';
 	$scope.BuscarClientes = function() {
-		$http.get('http://localhost:8081/SmallBI/rest/smallbi/clientes/list')
+		$http.get('http://smallbi.whelastic.net/rest/smallbi/clientes/list')
 				.success(function(data) {
-					$scope.clientes = data.clientes;
+					if (data.clientes.length == undefined){
+						$scope.clientes = data;
+					} else {
+						$scope.clientes = data.clientes;
+					}
+					
 				});
 	};
 	$scope.BuscarClientes();
@@ -62,7 +67,7 @@ SmallBIApp.controller('ClienteController', function($scope, $http) {
 		}
 
 		$http.post(
-				'http://localhost:8081/SmallBI/rest/smallbi/clientes/create',
+				'http://smallbi.whelastic.net/rest/smallbi/clientes/create',
 				parameter, config).success(
 				function(data, status, headers, config) {
 					$scope.Resposta = 'Empresa Salva com Sucesso!';
@@ -78,9 +83,13 @@ SmallBIApp.controller('ClienteController', function($scope, $http) {
 SmallBIApp.controller('PlanoController', function($scope, $http) {
 	$scope.message = 'Cadastro de Planos';
 	$scope.BuscarPlanos = function() {
-		$http.get('http://localhost:8081/SmallBI/rest/smallbi/planos/list')
+		$http.get('http://smallbi.whelastic.net/rest/smallbi/planos/list')
 				.success(function(data) {
-					$scope.planos = data.planos;
+					if (data.planos.length == undefined){
+						$scope.planos = data;
+					} else {
+						$scope.planos = data.planos;
+					}
 				});
 	};
 	$scope.BuscarPlanos();
@@ -101,7 +110,7 @@ SmallBIApp.controller('PlanoController', function($scope, $http) {
 		}
 
 		$http.post(
-				'http://localhost:8081/SmallBI/rest/smallbi/planos/create',
+				'http://smallbi.whelastic.net/rest/smallbi/planos/create',
 				parameter, config).success(
 				function(data, status, headers, config) {
 					$scope.Resposta = 'Plano Salva com Sucesso!';
@@ -117,9 +126,13 @@ SmallBIApp.controller('PlanoController', function($scope, $http) {
 SmallBIApp.controller('UsuarioController', function($scope, $http) {
 	$scope.message = 'Cadastro de Usuário.';
 	$scope.BuscarUsuarios = function() {
-		$http.get('http://localhost:8081/SmallBI/rest/smallbi/usuarios/list')
+		$http.get('http://smallbi.whelastic.net/rest/smallbi/usuarios/list')
 				.success(function(data) {
-					$scope.usuarios = data.usuarios;
+					if (data.usuarios.length == undefined){
+						$scope.usuarios = data;
+					} else {
+						$scope.usuarios = data.usuarios;
+					}
 				});
 	};
 	$scope.BuscarUsuarios();
@@ -128,8 +141,8 @@ SmallBIApp.controller('UsuarioController', function($scope, $http) {
 
 		var parameter = JSON.stringify({
 			type : "usuarios",
-			login : $scope.login,
 			nome : $scope.nome,
+			login : $scope.login,
 			senha : $scope.senha
 		});
 
@@ -140,7 +153,7 @@ SmallBIApp.controller('UsuarioController', function($scope, $http) {
 		}
 
 		$http.post(
-				'http://localhost:8081/SmallBI/rest/smallbi/usuarios/create',
+				'http://smallbi.whelastic.net/rest/smallbi/usuarios/create',
 				parameter, config).success(
 				function(data, status, headers, config) {
 					$scope.Resposta = 'Usuário Salvo com Sucesso!';

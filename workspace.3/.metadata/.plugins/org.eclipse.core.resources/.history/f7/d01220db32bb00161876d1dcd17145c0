@@ -12,9 +12,9 @@
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
                         
-			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://node56669-smallbi.whelastic.net/smallbiArqSoft" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://node115244-smallbi.jelasticlw.com.br/smallbiArqSoft" />
 			<property name="javax.persistence.jdbc.user" value="webadmin" />
-			<property name="javax.persistence.jdbc.password" value="CDMbky38671" />
+			<property name="javax.persistence.jdbc.password" value="TABgoi77659" />
 
             <property name="hibernate.hbm2ddl.auto" value="update"/>
 
